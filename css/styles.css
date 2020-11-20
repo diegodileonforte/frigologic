@@ -102,13 +102,6 @@ header {
     border-radius: 20px;
 }
 
-.dimesiones__contenedor {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .dimensiones__valores {
     display: flex;
     flex-direction: column;
@@ -263,10 +256,7 @@ header {
     padding: 1rem;
 }
 
-
-
 #frigorias {
-    color: white;
     margin-bottom: 1rem;
     border-radius: 10px;
 }
@@ -298,4 +288,10 @@ header {
 
 #contResultado {
     grid-area: contResultado;
+}
+
+output{
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 700;
 }

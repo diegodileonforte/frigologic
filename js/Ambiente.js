@@ -85,7 +85,7 @@ function Ambiente() {
         $('html, body').animate({
             scrollTop: $("#frigorias").offset().top
         }, 1500);
-        $(".superficie__contenedor").slideDown(1000);
+        $(".superficie__contenedor").slideDown(500);
         $("#SuperficieTotal").text(superficieTotal);
         $("#frigorias").text(Frigorias);
         $("#Kcal").text(Kcal);

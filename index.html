@@ -43,24 +43,23 @@
     </section>
     <section id="dimensiones">
         <h2 class="titulo">DIMENSIONES DEL AMBIENTE</h2>
-        <div class="dimensiones__contenedor">
-            <div class="dimensiones__valores">
-                <label for="largo">Largo (mts)</label>
-                <input type="text" name="largo" id="largo" placeholder="0.0" autocomplete="off" />
-            </div>
-            <div class="dimensiones__valores">
-                <label for="ancho">Ancho (mts)</label>
-                <input type="text" name="ancho" id="ancho" placeholder="0.0" autocomplete="off" />
-            </div>
-            <div class="dimensiones__valores">
-                <label for="alto">Alto (mts)</label>
-                <input type="text" name="alto" id="alto" placeholder="0.0" autocomplete="off" />
-                </divZ>
-            </div>
-            <div class="superficie__contenedor" style="display: none;">
-                <label class="superficie__titulo" for="SuperficieTotal">Superficie Total (m3)</label>
-                <textarea name="SuperficieTotal" id="SuperficieTotal" cols="10" rows="1"></textarea>
-            </div>
+        <div class="dimensiones__valores">
+            <label for="largo">Largo (mts)</label>
+            <input type="text" name="largo" id="largo" placeholder="0.0" autocomplete="off" />
+        </div>
+        <div class="dimensiones__valores">
+            <label for="ancho">Ancho (mts)</label>
+            <input type="text" name="ancho" id="ancho" placeholder="0.0" autocomplete="off" />
+        </div>
+        <div class="dimensiones__valores">
+            <label for="alto">Alto (mts)</label>
+            <input type="text" name="alto" id="alto" placeholder="0.0" autocomplete="off" />
+            </divZ>
+        </div>
+        <div class="superficie__contenedor" style="display: none;">
+            <label class="superficie__titulo" for="SuperficieTotal">Superficie Total (m3)</label>
+            <output id="SuperficieTotal"></output>
+        </div>
     </section>
     <section id="adicionales">
         <h2 class="titulo">DATOS ADICIONALES</h2>
@@ -97,21 +96,21 @@
     </section>
     <div id="contResultado" hidden>
         <section id="resultado">
-            <h2 class="resultado__titulo">EQUIPO RECOMENDADO</h2>
-            <textarea name="frigorias" id="frigorias" cols="20" rows="1"></textarea>
+            <h2 class="resultado__titulo">FRIGORIAS</h2>
+            <output id="frigorias"></output>
         </section>
         <section id="valores">
             <div class="valores__contenedor">
                 <h3 class="valores__titulo">Kcal/h</h3>
-                <textarea name="kcal" id="Kcal" cols="10" rows="1"></textarea>
+                <output id="Kcal"></output>
             </div>
             <div class="valores__contenedor">
                 <h3 class="valores__titulo">Watts</h3>
-                <textarea name="watts" id="Watts" cols="10" rows="1"></textarea>
+                <output id="Watts"></output>
             </div>
             <div class="valores__contenedor">
                 <h3 class="valores__titulo">BTU</h3>
-                <textarea name="BTU" id="BTU" cols="10" rows="1"></textarea>
+                <output id="BTU"></output>
             </div>
         </section>
         <section id="acciones">
