@@ -15,9 +15,8 @@ body {
         "header header header"
         "temperatura dimensiones adicionales"
         "botonera botonera botonera"
-        "valores valores valores"
         "resultado resultado resultado"
-        "acciones acciones acciones";
+        "contResultado contResultado contResultado";
     grid-template-rows: repeat(7 auto);
     grid-template-columns: 33% 34% 33%;
     height: 100vh;
@@ -39,7 +38,7 @@ header {
     font-weight: 700;
 }
 
-.titulo__parrafo{
+.titulo__parrafo {
     font-size: 1.2rem;
 }
 
@@ -283,7 +282,7 @@ header {
     margin: 0 0.5rem 0.5rem 0;
 }
 
-#guardar img{
+#guardar img {
     margin: 0.5rem;
     width: 40px;
 }
@@ -292,7 +291,11 @@ header {
     margin: 0 0 0.5rem 0.5rem;
 }
 
-#imprimir img{
+#imprimir img {
     margin: 0.5rem;
     width: 40px;
+}
+
+#contResultado {
+    grid-area: contResultado;
 }

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frigologic</title>
+    <script src="./js/jQuery v. 3.5.1.js"></script>
     <script src="./js/Ambiente.js"></script>
     <script defer src="js/main.js"></script>
     <link rel="stylesheet" href="css/styles.css">
@@ -56,7 +57,7 @@
                 <input type="text" name="alto" id="alto" placeholder="0.0" autocomplete="off" />
                 </divZ>
             </div>
-            <div class="superficie__contenedor">
+            <div class="superficie__contenedor" style="display: none;">
                 <label class="superficie__titulo" for="SuperficieTotal">Superficie Total (m3)</label>
                 <textarea name="SuperficieTotal" id="SuperficieTotal" cols="10" rows="1"></textarea>
             </div>
@@ -90,34 +91,36 @@
         </div>
     </section>
     <section id="botonera">
-        <button id="limpiar" onClick="window.location.reload();">Limpiar</button>
+        <button id="limpiar" onClick="window.location.reload();">LIMPIAR</button>
         <button name="calcular" type="button" id="calcular" value="calcular">CALCULAR</button>
-        <button name="ayuda" type="button" id="ayuda" value="ayuda">Ayuda</button>
+        <button name="ayuda" type="button" id="ayuda" value="ayuda">AYUDA</button>
     </section>
-    <section id="valores">
-        <div class="valores__contenedor">
-            <h3 class="valores__titulo">Kcal/h</h3>
-            <textarea name="kcal" id="Kcal" cols="10" rows="1"></textarea>
-        </div>
-        <div class="valores__contenedor">
-            <h3 class="valores__titulo">Watts</h3>
-            <textarea name="watts" id="Watts" cols="10" rows="1"></textarea>
-        </div>
-        <div class="valores__contenedor">
-            <h3 class="valores__titulo">BTU</h3>
-            <textarea name="BTU" id="BTU" cols="10" rows="1"></textarea>
-        </div>
-    </section>
-    <section id="resultado">
-        <h2 class="resultado__titulo">EQUIPO RECOMENDADO</h2>
-        <textarea name="frigorias" id="frigorias" cols="20" rows="1"></textarea>
-    </section>
-    <section id="acciones">
-        <button name="guardar" type="button" id="guardar" value="guardar"><img src="imagenes/download.png"
-                alt=""></button>
-        <button name="imprimir" type="button" id="imprimir" value="imprimir"><img src="imagenes/printer.png"
-                alt=""></button>
-    </section>
+    <div id="contResultado" hidden>
+        <section id="resultado">
+            <h2 class="resultado__titulo">EQUIPO RECOMENDADO</h2>
+            <textarea name="frigorias" id="frigorias" cols="20" rows="1"></textarea>
+        </section>
+        <section id="valores">
+            <div class="valores__contenedor">
+                <h3 class="valores__titulo">Kcal/h</h3>
+                <textarea name="kcal" id="Kcal" cols="10" rows="1"></textarea>
+            </div>
+            <div class="valores__contenedor">
+                <h3 class="valores__titulo">Watts</h3>
+                <textarea name="watts" id="Watts" cols="10" rows="1"></textarea>
+            </div>
+            <div class="valores__contenedor">
+                <h3 class="valores__titulo">BTU</h3>
+                <textarea name="BTU" id="BTU" cols="10" rows="1"></textarea>
+            </div>
+        </section>
+        <section id="acciones">
+            <button name="guardar" type="button" id="guardar" value="guardar"><img src="imagenes/download.png"
+                    alt=""></button>
+            <button name="imprimir" type="button" id="imprimir" value="imprimir"><img src="imagenes/printer.png"
+                    alt=""></button>
+        </section>
+    </div>
 </body>
 
 </html>

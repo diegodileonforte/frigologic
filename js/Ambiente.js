@@ -45,7 +45,7 @@ function Ambiente() {
     }
 
     this.setOrientacion = () => {
-        var orientacion = document.getElementById("orientacion").value;
+        var orientacion = $("#orientacion").val();
         this.Orientacion = orientacion;
     }
 
@@ -81,20 +81,17 @@ function Ambiente() {
         let Watts = parseInt(Frigorias * 1.163);
         let Btu = Frigorias * 4;
 
-        let contSuperficieTotal = document.getElementById("SuperficieTotal");
-        contSuperficieTotal.innerHTML = superficieTotal;
+        $("#contResultado").show();
+        $('html, body').animate({
+            scrollTop: $("#frigorias").offset().top
+        }, 1500);
+        $(".superficie__contenedor").slideDown(1000);
+        $("#SuperficieTotal").text(superficieTotal);
+        $("#frigorias").text(Frigorias);
+        $("#Kcal").text(Kcal);
+        $("#Watts").text(Watts);
+        $("#BTU").text(Btu);
 
-        let contFrigorias = document.getElementById("frigorias");
-        contFrigorias.innerHTML = Frigorias;
-
-        let contKcal = document.getElementById("Kcal");
-        contKcal.innerHTML = Kcal;
-
-        let contWatts = document.getElementById("Watts");
-        contWatts.innerHTML = Watts;
-
-        let contBTU = document.getElementById("BTU");
-        contBTU.innerHTML = Btu;
     }
 
     //GETTERS//
@@ -145,17 +142,15 @@ function Ambiente() {
     };
     const calcularCocina = () => {
 
-        var checkCocina = document.getElementById("cocina");
         var cocina;
 
-        if (checkCocina.checked == true) {
+        if ($('#cocina').is(":checked")) {
             cocina = 1000;
         } else {
             cocina = 0;
         }
 
         this.Cocina = cocina;
-
         return cocina;
     };
 

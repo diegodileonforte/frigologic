@@ -1,20 +1,16 @@
 let miAmbiente = new Ambiente();
 
-let botonesTemperatura = document.getElementsByClassName('temp_btn_onclick');
+$(".temp_btn_onclick").click((evento)=>{
+    miAmbiente.setTemperatura(evento.target.parentNode.value)
+});
 
-for (let i = 0; i < botonesTemperatura.length; i++) {
-    botonesTemperatura[i].addEventListener('click', (evento) => {
-        miAmbiente.setTemperatura(evento.target.parentNode.value);
-    });
-}
-
-document.getElementById("largo").onchange = miAmbiente.setLargo;
-document.getElementById("ancho").onchange = miAmbiente.setAncho;
-document.getElementById("alto").onchange = miAmbiente.setAlto;
-document.getElementById("orientacion").onchange = miAmbiente.setOrientacion;
-document.getElementById("ventanas").onchange = miAmbiente.setVentanas;
-document.getElementById("personas").onchange = miAmbiente.setOcupantes;
-document.getElementById("calcular").onclick = miAmbiente.calculoGlobal;
+$("#largo").change(miAmbiente.setLargo);
+$("#ancho").change(miAmbiente.setAncho);
+$("#alto").change(miAmbiente.setAlto);
+$("#orientacion").change(miAmbiente.setOrientacion);
+$("#ventanas").change(miAmbiente.setVentanas);
+$("#ocupantes").change(miAmbiente.setOcupantes);
+$("#calcular").click(miAmbiente.calculoGlobal);
 
 /* // //Botón imprimir//
 function imprimir() {
