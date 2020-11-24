@@ -72,17 +72,21 @@ header {
     justify-content: center;
     align-items: center;
     margin: 0.5rem;
+
 }
 
 .temperatura__boton img {
     background-color: #1B2845;
     width: 50px;
     margin: 0.2rem;
+
 }
 
 
 .temperatura__boton button {
     margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 50px;
 }
 
 .temperatura__boton label {
@@ -211,6 +215,14 @@ header {
     border-radius: 20px;
 }
 
+#ayuda a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #1B2845;
+    font-weight: 500;
+    background-color: #65AFFF;
+}
+
 #valores {
     grid-area: valores;
     display: flex;
@@ -290,7 +302,7 @@ header {
     grid-area: contResultado;
 }
 
-output{
+output {
     font-size: 1.5rem;
     color: white;
     font-weight: 700;
